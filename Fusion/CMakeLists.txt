@@ -1,6 +1,6 @@
 file(GLOB_RECURSE files "./src/*.c")
+include_directories(include)
 add_library(Fusion ${files})
-target_include_directories(Fusion ./include)
 if(UNIX AND NOT APPLE)
     target_link_libraries(Fusion m) # link math library for Linux
 endif()
