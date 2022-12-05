@@ -1,6 +1,10 @@
-file(GLOB_RECURSE files "./src/*.c")
+set (FUSION_SRCS 
+  ./src/FusionAhrs.c
+  ./src/FusionCompass.c
+  ./src/FusionOffset.c
+  )
 include_directories(include)
-add_library(Fusion ${files})
+add_library(Fusion ${FUSION_SRCS})
 if(UNIX AND NOT APPLE)
     target_link_libraries(Fusion m) # link math library for Linux
 endif()
