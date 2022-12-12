@@ -7,7 +7,8 @@
 # Build/Install
 
 ## Python
-Make sure you are in the right conda environment (python 3.9) the one used
+Make sure you are in the right conda environment (python 3.9) the one used for
+trainalytics.
 ```
 conda activate py39
 ```
