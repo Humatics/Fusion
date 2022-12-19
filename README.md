@@ -4,6 +4,47 @@
 [![Python](https://img.shields.io/pypi/pyversions/imufusion.svg)](https://pypi.org/project/imufusion/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+# Build/Install
+
+## Python
+Make sure you are in the right conda environment (python 3.9) the one used for
+trainalytics.
+```
+conda activate py39
+```
+
+One can install the package using `pip`
+```
+pip install imufusion
+```
+or build from source in your conda environment
+
+```
+cd <fusion_package_repo>
+python setup.py install --record files.txt.
+```
+A file named `files.txt` will be saved in the current directory
+containing all the files that are installed after package installation. This is
+helpful for uninstalling and removing the package later on when installed with
+`setup.py`.
+
+After the package is installed, run the example in
+`<fusion_package_rep>/Python/`
+```
+python simple_example.py
+```
+
+## C++
+```
+cd <fusion_package_repo>
+mkdir build && cd build
+cmake ..
+make 
+
+```
+Run the examples to make sure the build is proper.
+
+
 # Fusion
 
 Fusion is a sensor fusion library for Inertial Measurement Units (IMUs), optimised for embedded systems.  Fusion is a C library but is also available as the Python package [imufusion](https://pypi.org/project/imufusion/).  Two example Python scripts, [simple_example.py](https://github.com/xioTechnologies/Fusion/blob/main/Python/simple_example.py) and [advanced_example.py](https://github.com/xioTechnologies/Fusion/blob/main/Python/advanced_example.py) are provided with example sensor data to demonstrate use of the package.
